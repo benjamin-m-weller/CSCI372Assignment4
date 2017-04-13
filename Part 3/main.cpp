@@ -2,6 +2,19 @@
 
 using namespace std;
 
+//Going to define an exception class.
+
+class invalidInt
+{
+	
+};
+
+class overflowException
+{
+	
+};
+
+
 void getInput()
 {
 	ifstream myStream;
@@ -17,6 +30,13 @@ void getInput()
 		if (inputVariable>-100 && inputVariable<100)
 		{
 			totalSum+=squareInput(inputVariable);
+			
+			//Because an overflow makes the integer negative all I have to do is do a simple test to see if the integer is negative.
+			//Testing for negativitiy
+			if (totalSum<0)
+			{
+				//Throw  overflow exception. 
+			}
 		}
 		else
 		{
