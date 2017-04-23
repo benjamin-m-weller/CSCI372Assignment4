@@ -1,16 +1,17 @@
 #include <iostream>
+#include <list>
+
+using namespace std;
 
 class Stack
 {
 	private:
-		int *stackPtr;
-		int maxLen;
-		int topSub;
+		list<int> myList();
 	public:
 		Stack();
 		~Stack();
 		void push(int);
 		void pop();
 		int top();
-		int empty();
+		bool empty();
 };
