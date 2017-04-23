@@ -14,7 +14,7 @@ public:
   }
 };
 
-class myB: myC
+class myB: public myC
 {
 public:
   myB()  { }
@@ -24,7 +24,7 @@ public:
   }
 };
 
-class myA: myB
+class myA: public myB
 {
 public:
   myA()  { }
@@ -36,7 +36,9 @@ public:
  
 int main()
 {
-    myA indicator();
-    indicator->print();
+    myA indicator;
+    indicator.print();
+    indicator.myB::print();
+    indicator.myC::print();
     return 0;
 }
