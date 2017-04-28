@@ -19,3 +19,5 @@ mother(X, Y) :- female(X), parent(X, Y).
 */
 
 sister(X, Y) :- female(X), parent(A, X), parent(B, X), parent(A, Y), parent(B, Y), X\=Y.
+
+?-sister(lauren, ben).

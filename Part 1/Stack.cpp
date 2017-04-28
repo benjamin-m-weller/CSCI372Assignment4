@@ -16,7 +16,7 @@ Stack::~Stack()
 
 void Stack::push(int number)
 {
-	myList.push_back(number);
+	myList.push_front(number);
 }
 
 void Stack::pop()

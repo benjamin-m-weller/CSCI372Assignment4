@@ -7,3 +7,5 @@ male(andrew).
 male(brian).
 female(lori).
 mother(X, Y) :- female(X), parent(X, Y).
+
+?-mother(lori, ben).
